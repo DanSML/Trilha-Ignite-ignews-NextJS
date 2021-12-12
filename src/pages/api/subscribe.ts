@@ -29,14 +29,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     let customerId = user.data.stripe_customer_id
 
     if(!customerId) {
-      const stripeCustomer = await stripe.customers.create({
+      const stripeCustomer = await stripe.customers.create({ 
         email: session.user.email,
       });
 
       await fauna.query(
         query.Update(
           query.Ref(query.Collection('users'), user.ref.id),
-          {
+          { 
             data: {
               stripe_customer_id: stripeCustomer.id
             }
@@ -51,7 +51,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       payment_method_types: ['card'],
       billing_address_collection: 'required',
       line_items: [
-        { price: 'price_1Jlbw3IFlTXYtIUcsRHQZo7t', quantity: 1}
+        { price: 'price_1JddnbI6fjOmfAnA8URhOhv5', quantity: 1}
       ],
       mode: 'subscription',
       allow_promotion_codes: true,
