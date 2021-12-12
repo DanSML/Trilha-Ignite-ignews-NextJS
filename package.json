@@ -36,7 +36,9 @@
     "babel-jest": "^27.4.4",
     "eslint": "8.0.1",
     "eslint-config-next": "11.1.2",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.4",
-    "jest-dom": "^4.0.0"
+    "jest-dom": "^4.0.0",
+    "ts-jest": "^27.1.1"
   }
 }
