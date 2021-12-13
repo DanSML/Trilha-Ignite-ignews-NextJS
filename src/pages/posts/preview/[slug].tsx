@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next"
-import { getSession, useSession } from "next-auth/client"
-import { Router, useRouter } from "next/dist/client/router";
+import { useSession } from "next-auth/client"
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import { RichText } from "prismic-dom";
